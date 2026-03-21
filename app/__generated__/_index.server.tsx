@@ -5,20 +5,9 @@
       import type { PageMeta } from "@webstudio-is/sdk";
       import type { System, ResourceRequest } from "@webstudio-is/sdk";
 export const getResources = (_props: { system: System }) => {
-  const action: ResourceRequest = {
-    name: "action",
-    url: "",
-    searchParams: [
-    ],
-    method: "post",
-    headers: [
-      { name: "Content-Type", value: "application/json" },
-    ],
-  }
   const _data = new Map<string, ResourceRequest>([
   ])
   const _action = new Map<string, ResourceRequest>([
-    ["action", action],
   ])
   return { data: _data, action: _action }
 }
@@ -32,11 +21,11 @@ export const getResources = (_props: { system: System }) => {
   resources: Record<string, any>;
 }): PageMeta => {
   return {
-    title: "mudbourn's minecraft server",
+    title: "mudbourn's MC Server",
     description: "New members' setup guide website.",
     excludePageFromSearch: undefined,
     language: undefined,
-    socialImageAssetName: "IMG_0495_z1NthrmWMRK1Mh2lUstXB.jpg",
+    socialImageAssetName: "ptl7-Q3M_VwJyFabuucGEHv7nEFB_x.png",
     socialImageUrl: undefined,
     status: undefined,
     redirect: undefined,

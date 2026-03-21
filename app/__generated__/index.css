@@ -1,6 +1,4 @@
-@font-face {
-  font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 200 800; font-display: swap; src: url("/assets/BricolageGrotesque-VariableFont_opsz_wdth_wght_02oMRdjqVqw6czlsLz_3e.ttf") format("truetype");
-}@layer presets {
+@layer presets {
   :root {
     display: grid;
     min-height: 100%;
@@ -13,48 +11,23 @@
   a.w-element {
     box-sizing: border-box
   }
+  b.w-element {
+    font-weight: 700;
+    box-sizing: border-box
+  }
   body.w-element {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0
   }
-  button.w-element {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    box-sizing: border-box;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    text-transform: none;
-    margin: 0
-  }
-  div.w-element {
-    box-sizing: border-box
-  }
   h1.w-element {
     box-sizing: border-box
   }
-  input.w-element {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    box-sizing: border-box;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    margin: 0
-  }
-  label.w-element {
-    box-sizing: border-box
-  }
-  p.w-element {
-    box-sizing: border-box
-  }
   div.w-box {
+    box-sizing: border-box
+  }
+  p.w-paragraph {
     box-sizing: border-box
   }
   h1.w-heading {
@@ -64,127 +37,38 @@
     box-sizing: border-box;
     min-height: 1em
   }
-  p.w-paragraph {
-    box-sizing: border-box
-  }
   img.w-image {
     box-sizing: border-box;
     max-width: 100%;
     display: block;
     height: auto
   }
-  form.w-webhook-form {
-    box-sizing: border-box
-  }
-  div.w-html-embed {
-    display: contents;
-    white-space: normal;
-    white-space-collapse: collapse
-  }
 }
 @media all {
-  .w-element-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255 255 255 / 1)
-  }
-  .w-element-2 {
-    position: relative;
-    text-align: center;
-    font-weight: 900;
-    font-size: 8rem;
-    line-height: 1;
-    letter-spacing: -0.05em
-  }
-  .w-element-3 {
-    position: absolute;
-    top: 0;
-    right: -0.125rem;
-    bottom: 0;
-    left: 0.125rem;
-    opacity: 0.3
-  }
-  .w-element-4 {
-    position: absolute;
-    top: 0;
-    right: 0.125rem;
-    bottom: 0;
-    left: -0.125rem;
-    opacity: 0.3
-  }
-  .w-element-5 {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    background-color: rgb(255 255 255 / 1);
-    height: 0.375rem
-  }
-  .w-element-6 {
-    margin-top: 1.5rem;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    letter-spacing: 0.05em
-  }
-  .w-built-with-webstudio {
-    display: inline-flex;
-    row-gap: 6px;
-    column-gap: 6px;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 6px;
-    padding-right: 10px;
-    padding-bottom: 6px;
-    padding-left: 10px;
-    right: 16px;
-    bottom: 16px;
-    color: rgb(251 252 253 / 1);
-    font-family: system-ui, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;
-    text-decoration-line: none;
-    -webkit-background-clip: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    background-image: linear-gradient(135deg,#4a4efa 0%,#bd2fdb 66%,#ec59ce 100%), linear-gradient(135deg,#92fddc 0%,#7d7ffb 31.94%,#ed72fe 64.24%,#fdd791 100%);
-    border: 1px solid transparent;
-    white-space: nowrap
-  }
-  .w-logo {
-    display: block;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0
-  }
   .w-main {
-    min-height: 100vh;
+    min-height: auto;
     background-color: rgb(0 0 0 / 1);
     color: rgb(235 248 255 / 1);
     font-family: "Bricolage Grotesque", sans-serif;
-    padding: 2rem
-  }
-  .w-black-background {
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
     column-gap: 1rem;
-    row-gap: 1rem
+    row-gap: 1rem;
+    order: -1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: center;
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 2rem
   }
   .w-card {
     margin-left: auto;
@@ -194,41 +78,46 @@
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: rgb(76 106 73 / 1);
-    row-gap: 16px;
-    column-gap: 16px;
+    background-color: rgb(164 39 86 / 1);
+    row-gap: 1rem;
+    column-gap: 1rem;
     position: relative;
     box-shadow: 0px 16px 32px 0px rgb(42 67 101 / 0.3);
     border-top-color: rgb(0 0 0 / 1);
     border-right-color: rgb(0 0 0 / 1);
     border-bottom-color: rgb(0 0 0 / 1);
     border-left-color: rgb(0 0 0 / 1);
-    max-width: fit-content;
+    max-width: none;
     object-fit: scale-down;
-    overflow-x: visible;
-    overflow-y: visible;
+    overflow-x: hidden;
+    overflow-y: hidden;
     flex-wrap: wrap;
     width: fit-content;
     height: fit-content;
-    align-content: space-between;
+    align-content: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-auto-columns: 1fr;
+    object-position: 50% 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    order: -1;
+    align-self: center;
     padding: 2rem
   }
   .w-colour-background {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     column-gap: 1rem;
     row-gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: visible;
+    overflow-y: visible;
     object-fit: scale-down;
     flex-grow: 0;
     flex-shrink: 1;
@@ -236,34 +125,56 @@
     order: -1;
     width: fit-content;
     height: fit-content;
+    border-top-color: rgb(134 41 82 / 1);
+    border-right-color: rgb(134 41 82 / 1);
+    border-bottom-color: rgb(134 41 82 / 1);
+    border-left-color: rgb(134 41 82 / 1);
+    text-decoration-line: none;
+    max-width: 100%;
+    position: relative;
+    font-size: 120%
+  }
+  .w-element-1 {
+    align-self: center;
+    justify-self: center;
+    order: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 1px;
+    row-gap: 1px;
+    flex-wrap: wrap;
+    align-content: center;
     border-top-color: rgb(0 0 0 / 1);
     border-right-color: rgb(0 0 0 / 1);
     border-bottom-color: rgb(0 0 0 / 1);
     border-left-color: rgb(0 0 0 / 1)
   }
-  .w-name-handle {
+  :root {
+    color: rgb(0 0 0 / 1);
+    border-top-color: rgb(0 0 0 / 1);
+    border-right-color: rgb(0 0 0 / 1);
+    border-bottom-color: rgb(0 0 0 / 1);
+    border-left-color: rgb(0 0 0 / 1);
+    background-color: rgb(0 0 0 / 1)
+  }
+  .w-main-1 {
     text-align: center;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    align-self: center;
+    order: -1;
     display: flex;
     flex-direction: column;
-    order: -1;
-    align-self: center
-  }
-  .w-heading-1 {
-    font-size: 1.5rem;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
-  }
-  .w-text-1 {
-    font-size: 1.5rem;
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    text-decoration-line: underline
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 70%
   }
   .w-information {
     text-align: center;
@@ -287,25 +198,452 @@
     font-size: 120%;
     text-decoration-line: underline
   }
+  .w-element-2 {
+    color: rgb(0 0 0 / 1)
+  }
+  .w-name-handle {
+    text-align: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    order: -1;
+    align-self: center
+  }
+  .w-heading-1 {
+    font-size: 1.5rem;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    color: rgb(0 0 0 / 1);
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    flex-grow: 0;
+    flex-shrink: 1
+  }
+  .w-text-1 {
+    font-size: 1.5rem;
+    color: rgb(0 0 0 / 1);
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    text-decoration-line: none
+  }
+  .w-information-1 {
+    text-align: center;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    align-self: center;
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    max-width: 65%
+  }
   .w-paragraph-2 {
     margin-top: 0em;
     margin-bottom: 0em;
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     color: rgb(0 0 0 / 1);
+    font-size: 120%
+  }
+  .w-element-3 {
+    color: rgb(0 0 0 / 1)
+  }
+  .w-box-1 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-1 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-paragraph-3 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
     font-size: 120%;
-    order: -1;
-    flex-grow: 0;
-    flex-shrink: 1;
-    align-self: center;
+    align-self: center
+  }
+  .w-element-4 {
+    color: rgb(0 0 0 / 1)
+  }
+  .w-paragraph-4 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%
+  }
+  .w-paragraph-5 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%
+  }
+  .w-paragraph-6 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%
+  }
+  .w-paragraph-7 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%;
+    min-width: 100%
+  }
+  .w-paragraph-8 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%;
+    min-width: 100%
+  }
+  .w-paragraph-9 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%
+  }
+  .w-box-2 {
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    border-top-color: rgb(0 0 0 / 1);
-    border-right-color: rgb(0 0 0 / 1);
-    border-bottom-color: rgb(0 0 0 / 1);
-    border-left-color: rgb(0 0 0 / 1)
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 45%;
+    aspect-ratio: 1;
+    align-self: center;
+    order: -1;
+    flex-wrap: wrap;
+    flex-direction: column
+  }
+  .w-image-2 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    height: 100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    left: 0rem
+  }
+  .w-box-3 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-3 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-4 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-4 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-5 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-5 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-6 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-6 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-7 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-7 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-8 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-8 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-9 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-9 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-box-10 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: 1.5;
+    min-width: auto;
+    max-width: 70%
+  }
+  .w-image-10 {
+    position: relative;
+    object-fit: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 100%
+  }
+  .w-element-5 {
+    color: rgb(0 0 0 / 1)
+  }
+  .w-paragraph-10 {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    color: rgb(0 0 0 / 1);
+    font-size: 120%
+  }
+  .w-element-6 {
+    color: rgb(0 0 0 / 1)
   }
   .w-h1 {
     border-top-color: rgb(0 0 0 / 0);
@@ -324,400 +662,12 @@
     align-self: center;
     order: -1
   }
-  .w-information-1 {
-    text-align: center;
-    border-top-left-radius: unset;
-    border-top-right-radius: unset;
-    border-bottom-left-radius: unset;
-    border-bottom-right-radius: unset;
-    align-self: center;
-    order: -1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 1rem;
-    row-gap: 1rem
-  }
-  .w-paragraph-3 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
-  .w-element-7 {
-    color: rgb(0 0 0 / 1)
-  }
-  .w-box-1 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-1 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-paragraph-4 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%;
-    align-self: center
-  }
-  .w-element-8 {
-    color: rgb(0 0 0 / 1)
-  }
-  .w-paragraph-5 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
-  .w-paragraph-6 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
-  .w-paragraph-7 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
-  .w-paragraph-8 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
-  .w-paragraph-9 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
-  .w-paragraph-10 {
-    margin-top: 0em;
-    margin-bottom: 0em;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1);
-    font-size: 120%
-  }
   .w-paragraph-11 {
     margin-top: 0em;
     margin-bottom: 0em;
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     color: rgb(0 0 0 / 1);
     font-size: 120%
-  }
-  .w-webhook-form-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    column-gap: 1rem;
-    row-gap: 1rem;
-    align-self: center;
-    flex-grow: 0;
-    flex-shrink: 1;
-    order: -1
-  }
-  .w-form-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-grow: 0;
-    flex-shrink: 1;
-    order: -1;
-    align-self: center;
-    color: rgb(0 0 0 / 1);
-    border-top-color: rgb(255 255 255 / 0);
-    border-right-color: rgb(255 255 255 / 0);
-    border-bottom-color: rgb(255 255 255 / 0);
-    border-left-color: rgb(255 255 255 / 0);
-    background-color: rgb(0 0 0 / 0);
-    column-gap: 1rem;
-    row-gap: 1rem;
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
-  }
-  .w-element-9 {
-    display: block
-  }
-  .w-element-10 {
-    display: block;
-    background-color: rgb(255 255 255 / 0.45);
-    border-top-color: rgb(0 0 0 / 0);
-    border-right-color: rgb(0 0 0 / 0);
-    border-bottom-color: rgb(0 0 0 / 0);
-    border-left-color: rgb(0 0 0 / 0)
-  }
-  .w-element-11 {
-    display: block
-  }
-  .w-element-12 {
-    display: block;
-    background-color: rgb(255 255 255 / 0.45);
-    border-top-color: rgb(0 0 0 / 0);
-    border-right-color: rgb(0 0 0 / 0);
-    border-bottom-color: rgb(0 0 0 / 0);
-    border-left-color: rgb(0 0 0 / 0)
-  }
-  .w-element-13 {
-    border-top-color: rgb(0 0 0 / 0);
-    border-right-color: rgb(0 0 0 / 0);
-    border-bottom-color: rgb(0 0 0 / 0);
-    border-left-color: rgb(0 0 0 / 0);
-    background-color: rgb(255 255 255 / 0.45)
-  }
-  .w-error-message {
-    font-size: 120%;
-    text-align: center;
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
-  }
-  .w-element-14 {
-    border-top-color: rgb(0 0 0 / 1);
-    border-right-color: rgb(0 0 0 / 1);
-    border-bottom-color: rgb(0 0 0 / 1);
-    border-left-color: rgb(0 0 0 / 1);
-    color: rgb(0 0 0 / 1);
-    text-decoration-line: underline
-  }
-  .w-success-message {
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    font-size: 120%;
-    text-align: center
-  }
-  .w-element-15 {
-    color: rgb(0 0 0 / 1);
-    text-decoration-line: underline
-  }
-  .w-box-2 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-2 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-3 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-3 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-4 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-4 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-5 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-5 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-6 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-6 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-7 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-7 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-8 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-8 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
-  }
-  .w-box-9 {
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 32rem;
-    aspect-ratio: 1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    height: 18rem
-  }
-  .w-image-9 {
-    position: relative;
-    object-fit: contain;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 200%;
-    max-width: none;
-    aspect-ratio: 1
   }
 }
 @media all and (max-width: 991px) {
@@ -727,54 +677,93 @@
     border-bottom-color: rgb(0 0 0 / 1);
     border-left-color: rgb(0 0 0 / 1);
     position: relative;
-    object-fit: contain;
+    object-fit: scale-down;
     min-height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap
-  }
-  .w-black-background {
-    border-top-color: rgb(0 0 0 / 1);
-    border-right-color: rgb(0 0 0 / 1);
-    border-bottom-color: rgb(0 0 0 / 1);
-    border-left-color: rgb(0 0 0 / 1);
-    background-color: rgb(0 0 0 / 1)
+    flex-wrap: wrap;
+    align-content: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto
   }
   .w-card {
-    background-color: rgb(76 106 73 / 1);
+    background-color: rgb(164 39 86 / 1);
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     max-width: none;
-    width: fit-content;
     height: fit-content;
     min-height: auto;
     align-items: center;
     justify-content: center;
     right: auto;
     left: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
     z-index: auto;
     align-self: center;
-    order: 0;
-    flex-grow: 0;
-    flex-shrink: 1;
+    order: -1;
+    flex-grow: 1;
+    flex-shrink: 0;
     object-fit: scale-down;
     overflow-x: visible;
     overflow-y: visible;
     padding-bottom: 2rem;
     flex-direction: column;
-    margin-left: 1.55rem;
-    margin-right: 0rem
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    object-position: 50% 50%;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-top: 2rem;
+    width: 100%;
+    margin: auto
   }
   .w-colour-background {
     position: relative;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    object-fit: scale-down;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    align-self: center;
+    order: -1;
+    height: 100%;
+    aspect-ratio: auto;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 100%;
+    max-width: 80%;
+    font-size: 120%;
+    margin: auto
+  }
+  .w-element-1 {
+    object-fit: scale-down;
+    overflow-x: auto;
+    overflow-y: auto
+  }
+  :root {
+    background-color: rgb(0 0 0 / 1)
+  }
+  .w-main-1 {
+    object-fit: scale-down
+  }
+  .w-paragraph-1 {
+    color: rgb(0 0 0 / 1);
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    position: relative
   }
   .w-heading-1 {
     color: rgb(0 0 0 / 1);
@@ -785,49 +774,53 @@
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     position: relative
   }
-  .w-paragraph-1 {
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    position: relative
+  .w-information-1 {
+    object-fit: scale-down
   }
   .w-paragraph-2 {
     color: rgb(0 0 0 / 1);
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     position: relative
   }
-  .w-h1 {
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    margin-top: 2rem
-  }
-  .w-paragraph-3 {
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    position: relative
-  }
   .w-box-1 {
-    object-fit: scale-down;
+    object-fit: contain;
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
+    width: 100%;
+    height: 100%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 85%
   }
   .w-image-1 {
     align-self: center;
     order: -1;
     position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     overflow-x: visible;
     overflow-y: visible;
+    aspect-ratio: auto;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px
+  }
+  .w-paragraph-3 {
+    color: rgb(0 0 0 / 1);
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    position: relative
   }
   .w-paragraph-4 {
     color: rgb(0 0 0 / 1);
@@ -859,268 +852,423 @@
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     position: relative
   }
+  .w-box-2 {
+    object-fit: scale-down;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    align-self: center;
+    order: -1;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center
+  }
+  .w-image-2 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-x: visible;
+    overflow-y: visible;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap
+  }
+  .w-box-3 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+  }
+  .w-image-3 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-4 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+  }
+  .w-image-4 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-5 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+  }
+  .w-image-5 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-6 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+  }
+  .w-image-6 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-7 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+  }
+  .w-image-7 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-8 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center
+  }
+  .w-image-8 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-9 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 85%
+  }
+  .w-image-9 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-box-10 {
+    object-fit: contain;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    aspect-ratio: auto;
+    order: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 85%
+  }
+  .w-image-10 {
+    align-self: center;
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    aspect-ratio: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px
+  }
+  .w-element-5 {
+    color: rgb(0 0 0 / 1)
+  }
   .w-paragraph-10 {
     color: rgb(0 0 0 / 1);
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     position: relative
+  }
+  .w-h1 {
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    margin-top: 0rem;
+    margin-bottom: 0rem
   }
   .w-paragraph-11 {
     color: rgb(0 0 0 / 1);
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
     position: relative
   }
-  .w-box-2 {
-    object-fit: scale-down;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-2 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-3 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-3 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-4 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-4 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-5 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-5 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-6 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-6 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-7 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-7 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-8 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-8 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
-  .w-box-9 {
-    object-fit: cover;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 210.25px;
-    height: 210.25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px
-  }
-  .w-image-9 {
-    align-self: center;
-    order: -1;
-    position: relative;
-    width: 210.25%;
-    height: 210.25px;
-    object-fit: cover;
-    overflow-x: visible;
-    overflow-y: visible;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit
-  }
 }
 @media all and (max-width: 767px) {
+  .w-main {
+    width: 100%;
+    height: 100%;
+    order: -1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    object-fit: fill
+  }
   .w-card {
     align-items: center;
-    justify-content: start;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-self: center;
     flex-grow: 1;
     flex-shrink: 0;
-    order: 0;
-    right: 0%;
-    left: 0%;
+    order: -1;
+    right: auto;
+    left: auto;
     margin-bottom: 0rem;
     bottom: auto;
     height: fit-content;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: visible;
+    overflow-y: visible;
     object-fit: contain;
     object-position: 50% 50%;
     width: fit-content;
-    padding-left: 2rem;
-    background-color: rgb(76 106 73 / 1)
+    background-color: rgb(164 39 86 / 1);
+    margin-left: auto;
+    align-content: center;
+    margin-top: auto;
+    margin-right: auto;
+    min-height: auto;
+    max-width: none;
+    z-index: auto;
+    padding: 0rem
   }
   .w-colour-background {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    object-fit: contain;
+    overflow-x: visible;
+    overflow-y: visible;
+    object-fit: scale-down;
     align-items: center;
     justify-content: center;
     align-self: center;
     order: -1;
-    flex-grow: 0;
-    flex-shrink: 1
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 75%;
+    width: 100%
   }
-  .w-text-1 {
-    text-decoration-line: underline
+  :root {
+    border-top-color: rgb(0 0 0 / 1);
+    border-right-color: rgb(0 0 0 / 1);
+    border-bottom-color: rgb(0 0 0 / 1);
+    border-left-color: rgb(0 0 0 / 1)
   }
   .w-paragraph-1 {
     text-decoration-line: underline
   }
-  .w-h1 {
-    color: rgb(0 0 0 / 1);
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem
+  .w-text-1 {
+    text-decoration-line: none
+  }
+  .w-information-1 {
+    flex-direction: row
   }
   .w-box-1 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-1 {
     object-fit: cover;
@@ -1130,19 +1278,40 @@
     overflow-y: hidden
   }
   .w-box-2 {
-    width: 210.25px;
-    height: auto
+    width: 50%;
+    height: auto;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%
   }
   .w-image-2 {
-    object-fit: cover;
+    order: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow-x: hidden;
-    overflow-y: hidden
+    overflow-y: hidden;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid
   }
   .w-box-3 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-3 {
     object-fit: cover;
@@ -1152,8 +1321,11 @@
     overflow-y: hidden
   }
   .w-box-4 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-4 {
     object-fit: cover;
@@ -1163,8 +1335,11 @@
     overflow-y: hidden
   }
   .w-box-5 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-5 {
     object-fit: cover;
@@ -1174,8 +1349,11 @@
     overflow-y: hidden
   }
   .w-box-6 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-6 {
     object-fit: cover;
@@ -1185,8 +1363,11 @@
     overflow-y: hidden
   }
   .w-box-7 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-7 {
     object-fit: cover;
@@ -1196,8 +1377,11 @@
     overflow-y: hidden
   }
   .w-box-8 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-8 {
     object-fit: cover;
@@ -1207,8 +1391,11 @@
     overflow-y: hidden
   }
   .w-box-9 {
-    width: 210.25px;
-    height: auto
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
   }
   .w-image-9 {
     object-fit: cover;
@@ -1217,25 +1404,55 @@
     overflow-x: hidden;
     overflow-y: hidden
   }
+  .w-box-10 {
+    width: 100%;
+    height: auto;
+    order: 0;
+    flex-direction: row;
+    align-self: center
+  }
+  .w-image-10 {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden
+  }
+  .w-element-5 {
+    color: rgb(0 0 0 / 1)
+  }
+  .w-h1 {
+    color: rgb(0 0 0 / 1);
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0rem;
+    padding-bottom: 0rem
+  }
 }
 @media all and (max-width: 479px) {
   .w-main {
     min-width: auto;
     min-height: auto;
-    width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
     position: relative;
     overflow-x: visible;
-    overflow-y: visible
+    overflow-y: visible;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    align-self: center;
+    order: -1;
+    object-fit: scale-down;
+    padding: 2rem
   }
   .w-card {
     padding-left: 0em;
     padding-right: 0%;
-    order: 0;
+    order: -1;
     flex-grow: 1;
     flex-shrink: 0;
     right: 0%;
@@ -1244,17 +1461,62 @@
     justify-content: center;
     column-gap: 1rem;
     row-gap: 1rem;
-    width: fit-content;
     overflow-x: visible;
     overflow-y: visible;
     object-fit: scale-down;
-    margin-left: 0px;
-    background-color: rgb(76 106 73 / 1)
+    background-color: rgb(164 39 86 / 1);
+    align-content: center;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+    flex-direction: row;
+    width: 100%;
+    margin: auto
   }
   .w-colour-background {
     object-fit: scale-down;
     overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+    font-size: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%
+  }
+  .w-element-1 {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    align-self: center;
+    justify-self: center;
+    order: -1;
+    object-fit: scale-down;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 100%
+  }
+  .w-main-1 {
+    text-align: center;
+    width: 100%;
+    object-fit: scale-down;
+    align-content: center;
+    order: -1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    align-self: flex-start;
+    overflow-x: visible;
     overflow-y: visible
+  }
+  .w-information {
+    text-align: center
+  }
+  .w-paragraph-1 {
+    right: auto;
+    font-size: 100%
   }
   .w-name-handle {
     text-align: center
@@ -1266,24 +1528,33 @@
   .w-text-1 {
     right: 0%
   }
-  .w-information {
-    text-align: center
-  }
-  .w-paragraph-1 {
-    right: auto;
-    font-size: 100%
+  .w-information-1 {
+    text-align: center;
+    width: 100%;
+    object-fit: contain;
+    align-content: center;
+    order: -1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    align-self: center;
+    overflow-x: visible;
+    overflow-y: visible;
+    height: 100%;
+    max-width: 100%;
+    flex-direction: row
   }
   .w-paragraph-2 {
     right: auto;
-    font-size: 100%
+    font-size: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+    align-self: center;
+    order: -1;
+    flex-grow: 0;
+    flex-shrink: 1
   }
-  .w-h1 {
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    padding-top: 0rem;
-    padding-bottom: 0rem
-  }
-  .w-information-1 {
-    text-align: center
+  .w-box-1 {
+    width: 100%
   }
   .w-paragraph-3 {
     right: auto;
@@ -1303,7 +1574,8 @@
   }
   .w-paragraph-7 {
     right: auto;
-    font-size: 100%
+    font-size: 100%;
+    object-fit: contain
   }
   .w-paragraph-8 {
     right: auto;
@@ -1313,9 +1585,45 @@
     right: auto;
     font-size: 100%
   }
+  .w-box-2 {
+    width: 50%
+  }
+  .w-image-2 {
+    right: 0%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    align-self: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    order: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none
+  }
+  .w-element-5 {
+    color: rgb(0 0 0 / 1)
+  }
   .w-paragraph-10 {
     right: auto;
     font-size: 100%
+  }
+  .w-element-7 {
+    color: rgb(0 0 0 / 1)
+  }
+  .w-h1 {
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    padding-top: 0rem;
+    padding-bottom: 0rem
   }
   .w-paragraph-11 {
     right: auto;
@@ -1324,14 +1632,23 @@
 }
 @media all and (min-width: 1024px) {
   .w-main {
-    background-color: rgb(0 0 0 / 1)
+    background-color: rgb(0 0 0 / 1);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding-right: 0rem;
+    padding-top: 2rem;
+    padding-left: 0rem;
+    flex-direction: column;
+    object-fit: contain
   }
   .w-card {
-    background-color: rgb(76 106 73 / 1);
+    background-color: rgb(164 39 86 / 1);
     flex-grow: 0;
     flex-shrink: 1;
     order: -1;
-    align-self: center;
     flex-direction: column;
     border-top-color: rgb(0 0 0 / 1);
     border-right-color: rgb(0 0 0 / 1);
@@ -1340,49 +1657,88 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
     overflow-x: visible;
     overflow-y: visible;
-    width: fit-content;
+    min-width: 0%;
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    max-width: none;
+    object-fit: scale-down;
+    align-self: center;
+    height: fit-content;
+    align-content: center;
+    right: auto;
+    left: auto;
     aspect-ratio: auto;
-    min-width: 36rem
+    width: 80%
   }
   .w-colour-background {
-    object-fit: scale-down;
+    object-fit: contain;
     overflow-x: visible;
     overflow-y: visible;
-    max-width: 900px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     order: -1;
     align-self: center;
-    flex-grow: 0;
-    flex-shrink: 1
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 100%;
+    min-width: auto;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    font-size: 120%
+  }
+  :root {
+    background-color: rgb(0 0 0 / 1)
+  }
+  .w-main-1 {
+    flex-direction: column;
+    aspect-ratio: auto;
+    align-self: center;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: auto
+  }
+  .w-paragraph-1 {
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
   }
   .w-name-handle {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: column
+    flex-direction: column;
+    width: 100%
   }
   .w-heading-1 {
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
   }
   .w-text-1 {
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
-    color: rgb(0 0 0 / 1)
+    color: rgb(0 0 0 / 1);
+    text-decoration-line: none
   }
-  .w-paragraph-1 {
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
+  .w-information-1 {
+    flex-direction: column;
+    width: 70%
   }
   .w-paragraph-2 {
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
   }
-  .w-h1 {
-    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
+  .w-box-1 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5;
+    min-width: auto
+  }
+  .w-image-1 {
+    width: 100%
   }
   .w-paragraph-3 {
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
@@ -1405,7 +1761,95 @@
   .w-paragraph-9 {
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
   }
+  .w-box-2 {
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    width: 15%;
+    height: 100%;
+    flex-direction: column
+  }
+  .w-image-2 {
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    height: auto
+  }
+  .w-box-3 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5
+  }
+  .w-image-3 {
+    width: 100%
+  }
+  .w-box-4 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5
+  }
+  .w-image-4 {
+    width: 100%
+  }
+  .w-box-5 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5
+  }
+  .w-image-5 {
+    width: 100%
+  }
+  .w-box-6 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5
+  }
+  .w-image-6 {
+    width: 100%
+  }
+  .w-box-7 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5
+  }
+  .w-image-7 {
+    width: 100%
+  }
+  .w-box-8 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5;
+    min-width: 50%
+  }
+  .w-image-8 {
+    width: 100%
+  }
+  .w-box-9 {
+    width: 50%;
+    height: 100%;
+    aspect-ratio: 1.5
+  }
+  .w-image-9 {
+    width: 100%
+  }
+  .w-box-10 {
+    height: 100%;
+    aspect-ratio: 1.5;
+    width: 50%;
+    min-width: auto
+  }
+  .w-image-10 {
+    width: 100%
+  }
+  .w-element-5 {
+    color: rgb(0 0 0 / 1)
+  }
   .w-paragraph-10 {
+    font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif;
+    order: -1;
+    align-self: center
+  }
+  .w-h1 {
     font-family: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L", P052, Sylfaen, serif
   }
   .w-paragraph-11 {
