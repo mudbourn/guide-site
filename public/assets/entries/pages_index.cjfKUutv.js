@@ -12583,7 +12583,7 @@ const Kd = "MMS Setup Guide Page",
                       children: [
                         "Download ATLauncher for your device from the ",
                         S.jsx("a", {
-                          href: "https://drive.google.com/drive/folders/1we5Ba0onPnymESLgz4c5NNu2tJO6LwKK",
+                          href: "https://atlauncher.com/downloads",
                           className: "w-element w-element-5",
                           children: "ATLauncher Official Website",
                         }),
